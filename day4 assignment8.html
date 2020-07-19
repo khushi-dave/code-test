@@ -1,0 +1,16 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            ask=(question,yes,no)=>{
+                if(cnfirm(question))yes()
+                else no();
+        }
+            ask(
+                "Do you agree?",
+                =>{alert("You agreed.");},
+                =>{alert("You canceled the execution.");}
+            );
+        </script>
+    </body>
+</html>
