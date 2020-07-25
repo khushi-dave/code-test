@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color:white;
+                color:black;
+            }
+            .dark-mode{
+                background-color:black;
+                color:white;
+            }
+            </style>
+            <script>
+                 let name=prompt("please enter your name");
+                 document.write('Welocme ' + name + " to our official website.");
+                 function startTime(){
+                     var today=new Date();
+                     var h=today.getHours();
+                     var m=today.getMinutes();
+                     var s=today.getSeconds();
+                     
+                     m=checkTime(m);
+                     s=checkTime(s);
+                     
+                     document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+                     var t=setTimeout(startTime,500);
+                 }
+                 function checkTime(i){
+                     if(i<10){i="0"+i};
+                     return i;
+                 }
+                
+            </script>
+            </head>
+            <body onload="startTime()">
+            <div id="txt"></div>
+            <button onclick="myFunction()">Toggle dark mode</button>
+            <script>
+            function myFunction(){
+                var element=document.body;
+                element.classList.toggle("dark-mode");
+            }
+            </script>
+        </body>
+</html>
