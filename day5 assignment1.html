@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+      <script>
+            var inputArray=window.prompt("enter any positive number:");
+            while(inputArray<0){
+                alert("enter only positive numbers");
+                window.prompt("please enter again");
+                
+             }
+            
+            var inputArray=[];
+            var size=20;
+            for(var i=0;i<size;i++){
+                inputArray[i]=prompt('enter number'+(i+1));
+            }
+            console.log(inputArray);
+        let odd=inputArray.filter(el=>el%2!=0);
+        console.log(odd);
+        let oddcubes=inputArray.filter(el=>el%2!=0).map(el=>el**3)
+        console.log(oddcubes);
+        </script>
+    </body>
+</html>
+       
