@@ -1,0 +1,58 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            class User{
+                constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                }
+            login(){
+                 console.log(`${this.name} have logged in`);
+                 return this;
+             }
+            logout(){
+                console.log(`${this.name} have logged out`);
+                return this;
+             }
+            }
+            class Moderator extends User{
+                constructor(name,age,email){
+                    super(name,age,email);
+                    this.lucoins=0;
+                    addCoins(){
+                        this.luCoins++;
+                        console.log(`${this.name} has ${this.luCoins} coins`);
+                        return this;
+                    }
+                    removeCoins(){
+                        this.luCoins--;
+                        console.log(`${this.name} has removed ${this.luCoins} coins`);
+                        return this;
+                    }
+                    getDetails(){
+                        console.log(`Name is ${this.name}, email is ${this.email}`);
+                        return this;*/
+                    }
+                }
+            }
+            class Admin extends Moderator{
+                addCourse(user,course){
+                    user.course.push(course);
+                    console.log(user);
+                }
+                deleteCourse(user,course){
+                    user.course.remove(course);
+                    console.log(user);
+                }
+            }
+            let user1 = new User('changu',99,'chang@gmail.com');
+            let user2 = new User('nagin',11,'snake@gmai.com');
+            let user3 = new Moderator('mangu',09,'mang@gmail.com','Moderator');
+            let user4 = new Admin('sap',30,'nagin@gmail.com');
+            let users = [user1,user2,user3,user4];
+
+        </script>
+    </body>
+</html>
