@@ -1,0 +1,24 @@
+contract Report{
+    
+    string public Name;
+    uint public RollNo;
+    uint public Batch;
+    uint public MarksOfMaths;
+    uint public MarksOfScience;
+    uint public MarksOfEnglish;
+    uint public MarksOfSocialScience;
+    string public Status;
+    
+    function Report(string studentName,uint studentRollNo,uint BatchNo,uint resultMarksOfMaths,uint resultMarksOfScience,uint resultMarksOfEnglish,uint resultMarksOfSocialScience,string resultStatus)public{
+        
+        Name = studentName;
+        RollNo=studentRollNo;
+        Batch=BatchNo;
+        MarksOfMaths=resultMarksOfMaths;
+        MarksOfScience=resultMarksOfScience;
+        MarksOfEnglish=resultMarksOfEnglish;
+        MarksOfSocialScience=resultMarksOfSocialScience;
+        Status=resultStatus;
+    }
+    
+}
