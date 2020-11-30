@@ -1,0 +1,10 @@
+l=[]
+
+n=int(input("Enter the element for the list:"))
+
+if l%2==0:
+    for i in range(0,10):
+        lis=int(input())
+        l.append(lis)
+    
+print(l)
