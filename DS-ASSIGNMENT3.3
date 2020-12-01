@@ -1,0 +1,6 @@
+import numpy as np
+a = np.array( [12,23,34,45,56,23,12,12,23,34,45,65,56,56,24,13,12,23] )
+print("ARRAY:",a)
+unique_elements, counts_elements = np.unique(a, return_counts=True)
+print("FREQUENCY:")
+print(np.asarray((unique_elements, counts_elements)))
